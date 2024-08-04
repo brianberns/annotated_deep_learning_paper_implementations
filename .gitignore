@@ -17,3 +17,7 @@ diagrams/
 .comet.config
 settings.md
 labml_app.log
+/.vs
+/annotated_deep_learning_paper_implementations.pyproj
+/annotated_deep_learning_paper_implementations.sln
+env/
