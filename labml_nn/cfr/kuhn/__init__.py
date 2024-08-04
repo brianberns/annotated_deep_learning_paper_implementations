@@ -41,7 +41,6 @@ import numpy as np
 from labml import experiment
 from labml.configs import option
 from labml_nn.cfr import History as _History, InfoSet as _InfoSet, Action, Player, CFRConfigs
-from labml_nn.cfr.infoset_saver import InfoSetSaver
 
 # Kuhn poker actions are pass (`p`) or bet (`b`)
 ACTIONS = cast(List[Action], ['p', 'b'])
@@ -233,7 +232,7 @@ def main():
     # Since the algorithm iterates fast and we track data on each iteration, writing to
     # other destinations such as Tensorboard can be relatively time consuming.
     # SQLite is enough for our analytics.
-    experiment.create(name='kuhn_poker', writers={'sqlite'})
+    experiment.create(name='kuhn_poker')
     # Initialize configuration
     conf = Configs()
     # Load configuration
